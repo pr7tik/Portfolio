@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pratik Rao | Developer Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+<body>
+
+  <canvas id="bg-canvas"></canvas>
+  <div class="blob blob-purple"></div>
+  <div class="blob blob-blue"></div>
+
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <div class="nav-left-space"></div>
+
+      <nav class="nav-links" id="nav-links">
+        <div class="nav-capsule" id="nav-capsule"></div>
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="https://github.com/pr7tik" target="_blank" class="nav-social-btn" aria-label="GitHub">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/pratik-rao-b82819448/" target="_blank" class="nav-social-btn" aria-label="LinkedIn">
+          <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+        <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-purple-patch"></div>
+      <div class="hero-3d-portfolio">&lt;Portfolio /&gt;</div>
+
+      <div class="hero-layout">
+        <div class="hero-content">
+          <h1 class="hero-title fade-in">
+            Hi, I'm Pratik Rao
+          </h1>
+
+          <div class="hero-subtitle-pill fade-in">
+            <span class="subtitle-text">I am a <span class="typing-text" id="typing-text"></span><span class="cursor">&nbsp;</span></span>
+          </div>
+
+          <div class="hero-quote-box fade-in">
+            <p class="hero-quote">Breaking Things &amp; Building Better Ones. ⚡</p>
+          </div>
+
+          <p class="hero-description fade-in">
+            B.Tech CSE student at Lovely Professional University focused on modern web engineering, 
+            data structures, algorithms, and systems.
+          </p>
+
+          <div class="hero-cta fade-in">
+            <a href="#projects" class="btn btn-primary">
+              <span>View My Work</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+            <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+          </div>
+        </div>
+
+        <div class="hero-mascot-wrapper fade-in">
+          <div class="tux-container">
+            <div class="tux-ambient-glow"></div>
+            <svg class="tux-svg" viewBox="0 0 360 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="lampCone" x1="180" y1="80" x2="180" y2="400" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.5" />
+                  <stop offset="25%" stop-color="#818cf8" stop-opacity="0.25" />
+                  <stop offset="70%" stop-color="#a855f7" stop-opacity="0.12" />
+                  <stop offset="100%" stop-color="#38bdf8" stop-opacity="0" />
+                </linearGradient>
+                <radialGradient id="lampBulbGlow" cx="180" cy="78" r="30" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#ffffff" stop-opacity="1" />
+                  <stop offset="40%" stop-color="#38bdf8" stop-opacity="0.8" />
+                  <stop offset="100%" stop-color="#38bdf8" stop-opacity="0" />
+                </radialGradient>
+                <linearGradient id="tuxShading" x1="180" y1="170" x2="180" y2="370" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#1e293b" />
+                  <stop offset="100%" stop-color="#090d16" />
+                </linearGradient>
+                <linearGradient id="screenGrad" x1="120" y1="280" x2="240" y2="340" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#0284c7" />
+                  <stop offset="100%" stop-color="#0f172a" />
+                </linearGradient>
+              </defs>
+
+              <path d="M180 80 L60 400 L300 400 Z" fill="url(#lampCone)" class="lamp-light-beam" />
+
+              <g class="lamp-stand">
+                <path d="M310 395 C310 210 260 55 198 62" stroke="#64748b" stroke-width="7" stroke-linecap="round" fill="none" />
+                <path d="M198 62 L180 72" stroke="#94a3b8" stroke-width="6" stroke-linecap="round" fill="none" />
+                <path d="M150 78 C150 62 210 62 210 78 Z" fill="#334155" stroke="#475569" stroke-width="2" />
+                <circle cx="180" cy="78" r="10" fill="#f8fafc" />
+                <circle cx="180" cy="78" r="24" fill="url(#lampBulbGlow)" class="bulb-pulse" />
+              </g>
+
+              <g class="tux-body">
+                <ellipse cx="120" cy="385" rx="46" ry="17" fill="#f59e0b" stroke="#d97706" stroke-width="2" />
+                <ellipse cx="240" cy="385" rx="46" ry="17" fill="#f59e0b" stroke="#d97706" stroke-width="2" />
+
+                <path d="M180 165 C120 165 98 215 98 285 C98 355 120 380 180 380 C240 380 262 355 262 285 C262 215 240 165 180 165 Z" fill="url(#tuxShading)" stroke="#1e293b" stroke-width="2" />
+
+                <ellipse cx="180" cy="295" rx="60" ry="74" fill="#f8fafc" />
+
+                <ellipse cx="158" cy="216" rx="14" ry="19" fill="#ffffff" />
+                <ellipse cx="202" cy="216" rx="14" ry="19" fill="#ffffff" />
+                <circle cx="160" cy="218" r="7.5" fill="#0f172a" />
+                <circle cx="198" cy="218" r="7.5" fill="#0f172a" />
+                <circle cx="163" cy="214" r="2.8" fill="#ffffff" />
+                <circle cx="201" cy="214" r="2.8" fill="#ffffff" />
+
+                <path d="M162 230 Q180 225 198 230 Q180 260 162 230 Z" fill="#f59e0b" stroke="#b45309" stroke-width="1.5" />
+
+                <path d="M96 245 C78 275 84 315 110 335 C116 318 116 288 106 255 Z" fill="#0f172a" />
+                <path d="M264 245 C282 275 276 315 250 335 C244 318 244 288 254 255 Z" fill="#0f172a" />
+              </g>
+
+              <g class="laptop-group">
+                <path d="M115 352 L245 352 L268 376 L92 376 Z" fill="#1e293b" stroke="#334155" stroke-width="2" />
+                <rect x="126" y="356" width="108" height="15" rx="2" fill="#0f172a" />
+
+                <path d="M120 286 L240 286 L246 352 L114 352 Z" fill="#090d16" stroke="#38bdf8" stroke-width="2" />
+                <rect x="125" y="291" width="110" height="56" rx="2" fill="url(#screenGrad)" class="screen-glow" />
+
+                <text id="laptop-terminal-text" x="133" y="322" font-family="'Fira Code', monospace" font-size="12" fill="#ffffff" font-weight="600">&gt; hello</text>
+                <rect id="laptop-terminal-cursor" x="194" y="312" width="6" height="12" fill="#38bdf8" />
+              </g>
+
+              <ellipse cx="132" cy="354" rx="14" ry="9" fill="#0f172a" class="tux-paw-left" />
+              <ellipse cx="228" cy="354" rx="14" ry="9" fill="#0f172a" class="tux-paw-right" />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section about" id="about">
+      <div class="about-purple-patch"></div>
+
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">01. Identity</span>
+          <h2 class="section-title">About Me</h2>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-card glass reveal">
+            <div class="card-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+            <h3>Education &amp; Background</h3>
+            <p>
+              Undergraduate <strong>B.Tech Computer Science &amp; Engineering</strong> student at 
+              <strong>Lovely Professional University (LPU)</strong>. Always fascinated by what happens behind the screen 
+              and in the terminal.
+            </p>
+          </div>
+
+          <div class="about-card glass reveal delay-1">
+            <div class="card-icon"><i class="fa-solid fa-bolt"></i></div>
+            <h3>Philosophy</h3>
+            <p class="quote">“Breaking Things &amp; Building Better Ones.”</p>
+            <p>
+              I believe in learning by constructing, tearing down bottlenecks, experimenting with Linux environments, 
+              and writing maintainable, structured code.
+            </p>
+          </div>
+
+          <div class="about-card glass reveal delay-2">
+            <div class="card-icon"><i class="fa-solid fa-bullseye"></i></div>
+            <h3>Current Roadmap</h3>
+            <p>
+              Currently expanding my expertise in <strong>Full Stack Engineering</strong>, 
+              mastering <strong>C++ &amp; Python</strong> for DSA, and diving into backend infrastructure.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section skills" id="skills">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">02. Toolkit</span>
+          <h2 class="section-title">Technologies &amp; Skills</h2>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="skills-wrapper">
+          <div class="skill-category glass reveal">
+            <h3><i class="fa-solid fa-code"></i> Languages</h3>
+            <div class="chips-container">
+              <div class="chip"><i class="fa-solid fa-c"></i> C++</div>
+              <div class="chip"><i class="fa-brands fa-python"></i> Python</div>
+              <div class="chip"><i class="fa-brands fa-js"></i> JavaScript</div>
+              <div class="chip"><i class="fa-brands fa-html5"></i> HTML5</div>
+              <div class="chip"><i class="fa-brands fa-css3-alt"></i> CSS3</div>
+            </div>
+          </div>
+
+          <div class="skill-category glass reveal delay-1">
+            <h3><i class="fa-solid fa-screwdriver-wrench"></i> Tools &amp; Environment</h3>
+            <div class="chips-container">
+              <div class="chip"><i class="fa-brands fa-linux"></i> Linux OS</div>
+              <div class="chip"><i class="fa-brands fa-git-alt"></i> Git</div>
+              <div class="chip"><i class="fa-brands fa-github"></i> GitHub</div>
+              <div class="chip"><i class="fa-solid fa-terminal"></i> Bash / Terminal</div>
+              <div class="chip"><i class="fa-solid fa-laptop-code"></i> VS Code</div>
+            </div>
+          </div>
+
+          <div class="skill-category glass reveal delay-2">
+            <h3><i class="fa-solid fa-compass"></i> Focus Areas</h3>
+            <div class="chips-container">
+              <div class="chip"><i class="fa-solid fa-diagram-project"></i> DSA &amp; Algorithms</div>
+              <div class="chip"><i class="fa-solid fa-layer-group"></i> Full Stack Development</div>
+              <div class="chip"><i class="fa-solid fa-server"></i> Systems &amp; Backend</div>
+              <div class="chip"><i class="fa-solid fa-code-branch"></i> Open Source</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="terminal-quote glass reveal">
+          <code>
+            <span class="prompt">$</span> echo "Learning. Building. Improving. One commit at a time."
+          </code>
+        </div>
+      </div>
+    </section>
+
+    <section class="section projects" id="projects">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">03. Portfolio</span>
+          <h2 class="section-title">Featured Projects</h2>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="projects-grid">
+          <article class="project-card glass reveal">
+            <div class="project-top">
+              <i class="fa-regular fa-folder project-folder"></i>
+              <div class="project-links">
+                <a href="https://github.com/pr7tik" target="_blank" aria-label="GitHub Repo"><i class="fa-brands fa-github"></i></a>
+                <a href="#home" aria-label="Live Demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+              </div>
+            </div>
+            <h3 class="project-title">Interactive Developer Portfolio</h3>
+            <p class="project-desc">
+              A high-performance personal website featuring a custom dynamic canvas background, 
+              glassmorphism cards, and interactive UI animations.
+            </p>
+            <ul class="project-tags">
+              <li>HTML5</li>
+              <li>CSS3 Grid</li>
+              <li>Vanilla JS</li>
+              <li>Canvas API</li>
+            </ul>
+          </article>
+
+          <article class="project-card glass reveal delay-1">
+            <div class="project-top">
+              <i class="fa-regular fa-folder project-folder"></i>
+              <div class="project-links">
+                <a href="https://github.com/pr7tik" target="_blank" aria-label="GitHub Repo"><i class="fa-brands fa-github"></i></a>
+              </div>
+            </div>
+            <h3 class="project-title">C++ DSA Toolkit &amp; Problem Solver</h3>
+            <p class="project-desc">
+              Comprehensive implementation of algorithmic structures, search/sort mechanics, 
+              and memory-optimized data structures written in modern C++.
+            </p>
+            <ul class="project-tags">
+              <li>C++</li>
+              <li>Algorithms</li>
+              <li>Data Structures</li>
+              <li>Optimization</li>
+            </ul>
+          </article>
+
+          <article class="project-card glass reveal delay-2">
+            <div class="project-top">
+              <i class="fa-regular fa-folder project-folder"></i>
+              <div class="project-links">
+                <a href="https://github.com/pr7tik" target="_blank" aria-label="GitHub Repo"><i class="fa-brands fa-github"></i></a>
+              </div>
+            </div>
+            <h3 class="project-title">Linux CLI Automation Utility</h3>
+            <p class="project-desc">
+              Custom shell and Python scripts configured for automated development environments, 
+              workstation backups, and repository sync operations.
+            </p>
+            <ul class="project-tags">
+              <li>Python</li>
+              <li>Bash</li>
+              <li>Linux</li>
+              <li>Automation</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact">
+      <div class="contact-purple-patch"></div>
+
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">04. Connection</span>
+          <h2 class="section-title">Get In Touch</h2>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="contact-box glass reveal">
+          <h3>Let's Build Something Together</h3>
+          <p>
+            Whether you want to discuss a project, exchange ideas on software engineering, 
+            or talk about Linux setups, my inbox is always open!
+          </p>
+
+          <a href="mailto:pr7tik@gmail.com" class="btn btn-primary email-btn">
+            <i class="fa-regular fa-envelope"></i>
+            <span>Say Hello (pr7tik@gmail.com)</span>
+          </a>
+
+          <div class="social-links-row">
+            <a href="https://github.com/pr7tik" target="_blank" class="social-link-item">
+              <i class="fa-brands fa-github"></i>
+              <span>GitHub</span>
+            </a>
+            <a href="https://www.linkedin.com/in/pratik-rao-b82819448/" target="_blank" class="social-link-item">
+              <i class="fa-brands fa-linkedin"></i>
+              <span>LinkedIn</span>
+            </a>
+            <a href="https://instagram.com/airbused" target="_blank" class="social-link-item">
+              <i class="fa-brands fa-instagram"></i>
+              <span>Instagram</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-content">
+      <p>Designed &amp; Built by <strong>Pratik Rao</strong></p>
+      <p class="copyright">© <span id="year"></span> All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
