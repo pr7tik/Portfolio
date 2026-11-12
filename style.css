@@ -271,6 +271,18 @@ html {
   filter: drop-shadow(0 20px 45px rgba(109, 40, 217, 0.55));
   z-index: 1;
   pointer-events: none;
+  will-change: transform;
+
+  animation: slideInFromLeft 1.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translate3d(-100%, 0, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
 }
 
 .hero-3d-portfolio {
